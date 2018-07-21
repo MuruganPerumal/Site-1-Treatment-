@@ -7,166 +7,309 @@
   <meta name="description" content="Health care" />
   <meta name="keywords" content="EZ HEALTH ACCESS" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <script>
 	
-  $(document).ready(function(){
-    $("#Knee_surgery_li").click(function(){
-	
-        $("#Knee_surgery").show();
-		$("#Hip_surgery").hide();
-		$("#Shoulder_surgery").hide();
-		<!-- $("#Flight_Leg").hide(); -->
-		<!-- $("#Forecast").hide(); -->
-		<!-- $("#Paxis").hide(); -->
-		<!-- $("#Target_Leg").hide(); -->
-		<!-- $("#ATPCO").hide(); -->
-		<!-- $("#Target_OD").hide(); -->
-        <!-- $("#InFare").hide(); -->
-		
-		
-		
-    });
-    $("#Hip_surgery_li").click(function(){
-		$("#Knee_surgery").hide();
-		$("#Hip_surgery").show();
-		$("#Shoulder_surgery").hide();
-		
-    });
-	$("#Shoulder_surgery_li").click(function(){
-		$("#Knee_surgery").hide();
-		$("#Hip_surgery").hide();
-		$("#Shoulder_surgery").show();
-    });
-	
+ $(document).ready(function(){
+ $("#loadable-left-bar a").click(function(e){
+    e.preventDefault();
+    $(".toggle").hide();
+    var toShow = $(this).attr('href');
+    $(toShow).show();
+});
 	
 });
 </script>
-<body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark probootstrap-navbar-dark">
-    <div class="container">
-      <!-- <a class="navbar-brand" href="index.html">Health</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-nav" aria-controls="probootstrap-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<style>
 
-      <div class="collapse navbar-collapse" id="probootstrap-nav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
-          <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="ml-auto">
-          <form action="#" method="get" class="probootstrap-search-form mb-sm-0 mb-3">
-            <div class="form-group">
-              <button class="icon submit"><span class="fa fa-search"></span></button>
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- END nav -->
-  <header role="banner" class="probootstrap-header py-4">
-    <div class="container">
+ ul#loadable-left-bar li a:hover,ul#nav li.active a{
+    color: white !important;
+}
+body {
+    overflow: hidden;
+    height: 770px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.8;
+    font-size: 13px;
+    background: #fff;
+    color: #859196;
+}
+.probootstrap-aside-stretch-left, .probootstrap-aside-stretch-right {
+    background: #32609e;
+    height: 550px;
+}
+.probootstrap-services > div > div > div {
+     padding-top: 1em !important; 
+}
+
+.probootstrap-contact-phone{
+    color: #32609e;
+}
+.probootstrap-contact-phone .icon {
+	color: #32609e;
+	border: 2px solid #32609e;
+}
+.probootstrap-contact-phone a{
+	color: #32609e;
+}
+.btn-info {
+    color: #fff;
+    background-color: #32609e;
+    border-color: #32609e;
+}
+.title-bar{
+	padding:0px;
+}
+.icon-bar-title{
+padding-left:25px;
+	color : #32609e;
+	font-size : 13px;
+}
+.title-bar p{
+	align:"right";
+	padding-top:10px;
+	padding-left: 40px;
+}
+
+.vl {
+    border-right: 1px solid #32609e;
+    height: 100%;
+}
+.menu-bar-image {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+    border-radius: 50%;
+	border : 1px solid #32609e;
+}
+.menu-bar {
+	padding-top:0px;
+	border : 3px solid #32609e;
+}
+
+.menu-bar .vl {
+    border-right: 1px solid #32609e;
+    height: 100%;
+}
+
+.icon-text{
+color : black;
+	font-size : 9px;
+}
+
+.big-icon-text
+{
+	color : black;
+	font-size : 13px;
+}
+
+.menu-bar ul li {
+  display: inline-block;
+  word-break: break-all;
+}
+table{
+width: 100%;
+}
+td {
+    padding: 0;
+}
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+.logo-image:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>	
+<body>	
+<header role="banner" class="title-bar">
+    <!-- <div class="container"> -->
       <div class="row">
-        <div class="col-md-3 mb-4">
-          <a href="index.html" class="mr-auto"><img src="images/logo_1.gif" width="312" height="98" class="hires" alt="logo image"></a>
-        </div>  
-        <div class="col-md-9">
-          <div class="float-md-right float-none">
-          <div class="probootstrap-contact-phone d-flex align-items-top mb-3 float-left">
-            <span class="icon mr-2"><i class="fa fa-mobile-phone"></i></span>
-            <span class="probootstrap-text"> +900 111 1111 <small class="d-block"><a href="#" class="arrow-link">Appointment <i class="fa fa-chevron-right"></i></a></small></span>
-          </div>
-          </div>
-        </div>
+		  <div class="col-md-3">
+			<a href="pharmacy.html" class="btn btn-info btn-sm" >
+				<span class="glyphicon glyphicon-align-left"></span> 
+			</a>
+			<a href="#" >
+				<img src="images/ez-access-logo.png" alt="Smiley face" width="60" height="60">
+			</a>
+		  </div>
+		  <div class="col-md-3">
+				 
+		  </div>	
+		  <div class="col-md-3">
+				 
+		  </div>	
+		  
+		  <div class="col-md-3">
+			<div class="col-md-9"><p>Bringing healthcare closer</p>	 
+			</div>
+			<div class="col-md-1 vl" >
+			</div>
+			<div class="col-md-1">
+				<a  href="#" class="fa fa-bell" style="font-size:20px;border-color:blue;padding-top :15px;padding-right:10px"></a>
+			</div>
+			
+		  </div>
       </div>
-    </div>
+    <!-- </div> -->
   </header>
+	<header role="banner" class="probootstrap-header menu-bar">
+	<p class = "icon-bar-title">MY PLANS<p>
+      <div class="row">
+		  <div class="col-md-4 mb-4">
+			<div class = "col-md-1" >
+				
+			</div>
+			
+			<div class = "col-md-2" >
+					<a href="#" >
+						<img class = 'logo-image menu-bar-image' src="images/doctor-consultation-2.jpg" alt="Smiley face" width="50" height="50">
+					</a>
+					<p class = "icon-text">Doctor Consultation</p>
+			</div>
+			<div class = "col-md-2" >
+					<a href="#" >
+						<img class = 'logo-image menu-bar-image' src="images/doctor-consultation-3.jpg" alt="Smiley face" width="50" height="50">
+					</a>
+					<p class = "icon-text">Specialist Consultation</p>
+			</div>
+			
+			<div class = "col-md-2" >
+					<a href="#" >
+						<img class = 'logo-image menu-bar-image' src="images/diagnostic.jpg" alt="Smiley face" width="50" height="50">
+					</a>
+					<p class = "icon-text">Diagnostic</p>
+			</div>
+			
+			
+			<div class = "col-md-2" >
+					<a href="#" >
+						<img class = 'logo-image menu-bar-image' src="images/tele-nut.jpg" alt="Smiley face" width="50" height="50">
+					</a>
+					<p class = "icon-text">Tele-Nutritionaist</p>
+				</div>
+				
+				<div class = "col-md-2" >
+					<a href="#" >
+						<img class = 'logo-image menu-bar-image' src="images/home-care.jpg" alt="Smiley face" width="50" height="50">
+					</a>
+					<p class = "icon-text">Home care</p>
+				</div>
+				
+		  </div>
+		  <div class="col-md-4 mb-4" >
+			<table class="fixed">
+			<col width="25px" />
+			<col width="40px" />
+			<col width="25px" />
+			<col width="30px" />
+			<col width="25px" />
+			<col width="30px" />
+    
+			<tr>
+				<td>
+					<a href="#" class = "big-icon-text">
+						<img class = 'logo-image' src="images/speciality.ico" alt="Smiley face" width="60" height="60">
+					</a>
+				</td>
+				<td>
+					<p class = "big-icon-text">SUPER SPECIALITY</p>
+				</td>
+				<td>
+					<a href="#" class = "big-icon-text">
+						<img class = 'logo-image' src="images/inpatier.png" alt="Smiley face" width="60" height="60">
+					</a>
+				</td>
+				<td>
+					<p class = "big-icon-text">Impatier</p>
+				</td>
+				<td>
+					<a href="#" class = "big-icon-text">
+						<img class = 'logo-image' src="images/cart.png" alt="Smiley face" width="60" height="60">
+					</a>
+				</td>
+				<td>
+					<p class = "big-icon-text">Pharmacy</p>
+				</td>
+			</tr>
+			</table>
+		  </div>
+		  <!-- create empty divs -->
+		  <div class="col-md-1 mb-4">
+		  </div>
+		  <div class="col-md-3">
+		  <table>
+		  <tr>
+		  <td>
+				  <nav class="navbar probootstrap-navbar-dark">
+					
+					  <!-- <a class="navbar-brand" href="index.html">Health</a> -->
+					  
 
-  <!-- <section class="mb-5"> -->
-    <!-- <div class="container"> -->
-      <!-- <div class="row"> -->
-        <!-- <div class="col-md-6 mb-5"> -->
-          <!-- <h1 class="display-4">XXXX HealthCare</h1> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </section> -->
+					  <div class="collapse navbar-collapse" id="probootstrap-nav">
+						<div class="ml-auto">
+						  <form action="#" method="get" class="probootstrap-search-form mb-sm-0 mb-3">
+							<div class="form-group">
+							  <button class="icon submit"><span class="fa fa-search"></span></button>
+							  <input type="text" class="form-control" placeholder="Search">
+							</div>
+						  </form>
+						</div>
+					  </div>
+					
+				  </nav>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td>
+			<div class="probootstrap-contact-phone d-flex align-items-top mb-0 float-left" style = "font-size: 10px;">
+				<span class="icon mr-3"><i class="fa fa-mobile-phone"></i></span>
+				<span class="probootstrap-text"> +900 111 1111 
+					<small class="d-block">
+						<a href="#" class="arrow-link">Appointment 
+							<i class="fa fa-chevron-right">
+							</i>
+						</a>
+					</small>
+				</span>
+			</div>
+		</td>
+		</tr>
+		</table>
+		  </div>
+      </div>
+  </header>
   
-  <!-- <section class="probootstrap-features-1"> -->
-    <!-- <div class="container"> -->
-      <!-- <div class="row"> -->
-        <!-- <div class="col-md probootstrap-feature-item" style="background-image: url(images/img_1.jpg);"> -->
-          <!-- <div class="probootstrap-feature-item-text"> -->
-            <!-- <span class="icon"><i class="flaticon-first-aid-kit display-4"></i></span> -->
-            <!-- <h2>Pediatric <span>Therapy</span></h2> -->
-          <!-- </div> -->
-        <!-- </div>  -->
-        <!-- <div class="col-md probootstrap-opening"> -->
-          <!-- <h2 class="text-uppercase mb-3">Opening Hour <span>Medical Center</span></h2> -->
-          <!-- <ul class="list-unstyled probootstrap-schedule"> -->
-            <!-- <li>Mon-Fri <span>5:00-17:00</span></li> -->
-            <!-- <li>Sat <span>6:30-17:00</span></li> -->
-            <!-- <li>Sun <span>6:30-17:00</span></li> -->
-          <!-- </ul> -->
-        <!-- </div>  -->
-        <!-- <div class="col-md probootstrap-feature-item" style="background-image: url(images/img_2.jpg);"> -->
-          <!-- <div class="probootstrap-feature-item-text"> -->
-            <!-- <span class="icon"><i class="flaticon-gym-control-of-exercises-with-a-list-on-a-clipboard-and-heart-beats display-4"></i></span> -->
-            
-            <!-- <h2>Psychiatric <span>Therapy</span></h2> -->
-          <!-- </div> -->
-        <!-- </div>  -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </section> -->
-
-  <section class="probootstrap-services">
-    <div class="container">
+  <!-- pharmacy Body start-->
+  
+    <section class="probootstrap-services">
+    <div class="container" style = "max-width: 1487px;">
       <div class="row no-gutters">
         <div class="col-md-3 probootstrap-aside-stretch-left">
-          <div class="mb-3">
-            <h2 class="h6">Departments</h2>
-            <ul class="list-unstyled probootstrap-light mb-4">
-              <li><a href="#" id = "Knee_surgery_li">Knee surgery</a></li>
-              <li><a href="#" id = "Hip_surgery_li">Hip surgery</a></li>
-              <li><a href="#" id = "Shoulder_surgery_li">Shoulder surgery</a></li>
-              <li><a href="#">Spine surgery</a></li>
-              <li><a href="#">Bone marrow and stem cell</a></li>
-			  <li><a href="#">Cancer treatment</a></li>
-			  <li><a href="#">Bone marrow and stem cell</a></li>
-			  <li><a href="#">Heart surgery</a></li>
-			  <li><a href="#">Transplant</a></li>
-			  <li><a href="#">Obesity and weight loss treatment</a></li>
-			  <li><a href="#">Cosmetic and hair</a></li>
-			  <li><a href="#">IVF treatment</a></li>
-			  <li><a href="#">Hepatitis</a></li>
-			  <li><a href="#">Ayurveda & Wellness</a></li>
+          <div class="mb-2">
+            <h2 class="h6">Treatments</h2>
+            <ul class="list-unstyled probootstrap-light mb-4" id = "loadable-left-bar">
+              <li><a href="#Knee_surgery" >Knee surgery</a></li>
+              <li><a href="#Hip_surgery" >Hip surgery</a></li>
+              <li><a href="#Shoulder_surgery" >Shoulder surgery</a></li>
+              <li><a href="#SPINE_SURGERY">Spine surgery</a></li>
+              <li><a href="#BONE_MARROW_and_STEM_CELL">Bone marrow and stem cell</a></li>
+			  <li><a href="#CANCER_TREATMENT">Cancer treatment</a></li>
+			  <li><a href="#HEART_SURGERY">Heart surgery</a></li>
+			  <li><a href="#TRANSPLANT">Transplant</a></li>
+			  <li><a href="#OBESITY_and_WEIGHT_LOSS_TREATMENT">Obesity and weight loss treatment</a></li>
+			  <li><a href="#COSMETIC_and_HAIR">Cosmetic and hair</a></li>
+			  <li><a href="#IVF_TREATMENT">IVF treatment</a></li>
+			  <li><a href="#HEPATITIS">Hepatitis</a></li>
+			  <li><a href="#AYURVEDA_WELLNESS">Ayurveda & Wellness</a></li>
 			  
             </ul>
           </div>
         </div>
 		
-        <div class="col-md-9 pl-md-5 pl-0" id= "Knee_surgery">
+        <div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "Knee_surgery">
           <div class="row mb-5">
               <div class="col-lg-4 col-md-6">
                 <div class="media d-block mb-4 text-left probootstrap-media">
@@ -200,144 +343,598 @@
         </div>
 		
 		
-		<!-- <div class="col-md-9 pl-md-5 pl-0" id= "Hip_surgery"> -->
-          <!-- <div class="row mb-5"> -->
+		<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "Hip_surgery">
+          <div class="row mb-5">
               
-              <!-- <div class="col-lg-4 col-md-6"> -->
-                <!-- <div class="media d-block mb-4 text-left probootstrap-media"> -->
-                  <!-- <div class="probootstrap-icon mb-3"><span class="flaticon-price-tag display-4"></span></div> -->
-                  <!-- <div class="media-body"> -->
-                    <!-- <h3 class="h5 mt-0 text-secondary">Single Hip Replacement</h3> -->
-                    <!-- <p>staged bilateral total hip replacement, in which your hips are replaced in two separate surgeries..</p> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 col-md-6"> -->
-                <!-- <div class="media d-block mb-4 text-left probootstrap-media"> -->
-                  <!-- <div class="probootstrap-icon mb-3"><span class="flaticon-shield-with-cross display-4"></span></div> -->
-                  <!-- <div class="media-body"> -->
-                    <!-- <h3 class="h5 mt-0 text-secondary">Both Hip Replacement</h3> -->
-                    <!-- <p>Simultaneous bilateral total hip replacement, in which both hip joints are replaced in one surgery.</p> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-              <!-- </div> -->
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Single Hip Replacement</h3>
+                    <p>staged bilateral total hip replacement, in which your hips are replaced in two separate surgeries..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Both Hip Replacement</h3>
+                    <p>Simultaneous bilateral total hip replacement, in which both hip joints are replaced in one surgery.</p>
+                  </div>
+                </div>
+              </div>
 			  
-            <!-- </div> -->
-        <!-- </div> -->
-		<!-- <div class="col-md-9 pl-md-5 pl-0" id= "Shoulder_surgery"> -->
-          <!-- <div class="row mb-5"> -->
-              <!-- <div class="col-lg-4 col-md-6"> -->
-                <!-- <div class="media d-block mb-4 text-left probootstrap-media"> -->
-                  <!-- <div class="probootstrap-icon mb-3"><span class="flaticon-price-tag display-4"></span></div> -->
-                  <!-- <div class="media-body"> -->
-                    <!-- <h3 class="h5 mt-0 text-secondary">Shoulder Replacement</h3> -->
-                    <!-- <p>Shoulder replacement is a surgical procedure in which all or part of the glenohumeral joint is replaced by a prosthetic implant</p> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 col-md-6"> -->
-                <!-- <div class="media d-block mb-4 text-left probootstrap-media"> -->
-                  <!-- <div class="probootstrap-icon mb-3"><span class="flaticon-shield-with-cross display-4"></span></div> -->
-                  <!-- <div class="media-body"> -->
-                    <!-- <h3 class="h5 mt-0 text-secondary">Shoulder Rotator Cuff Repair</h3> -->
-                    <!-- <p>Surgery to repair a torn rotator cuff most often involves re-attaching the tendon to the head of humerus (upper arm bone).</p> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-              <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
+            </div>
+        </div>
+		<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "Shoulder_surgery">
+          <div class="row mb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Shoulder Replacement</h3>
+                    <p>Shoulder replacement is a surgical procedure in which all or part of the glenohumeral joint is replaced by a prosthetic implant</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Shoulder Rotator Cuff Repair</h3>
+                    <p>Surgery to repair a torn rotator cuff most often involves re-attaching the tendon to the head of humerus (upper arm bone).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+		
+		<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "SPINE_SURGERY">
+          <div class="row mb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Spine Fusion Surgery</h3>
+                    <p>Spinal fusion, also called spondylodesis or spondylosyndesis, is a neurosurgical orthopedic surgical technique that joins two or more vertebrae </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Scoliosis Surgery</h3>
+                    <p>The operation for scoliosis is a spinal fusion. The basic idea is to realign and fuse together the curved vertebrae so that they heal into a single, solid bone.</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Spine Tumor Surgery
+</h3>
+                    <p>Surgical removal of a spine tumor is indicated for patients who may benefit from the tumor removal, either in terms of removing the cancer and/or lessening any severe symptoms associated with the tumor
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Spinal Decompression
+</h3>
+                    <p>Spinal decompression is a type of traction therapy applied to the spine in an attempt to bring about several theoretical benefits
+.</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Minimally Invasive Spine Surgery</h3>
+                    <p>In order to treat spine problems with less injury to the muscles and other normal structures in the spine. In these procedures, doctors use specialized instruments to access the spine through small incisions
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Artificial Spine Lumbar Disc Replacement</h3>
+                    <p>In artificial disk replacement, worn or damaged disk material between the small bones in the spine (vertebrae) is removed and replaced with a synthetic or "artificial" disk.</p>
+                  </div>
+                </div>
+              </div>
+			   <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Cervical Spine Surgery</h3>
+                    <p>Cervical discectomy and fusion is a type of neck surgery that involves removing a damaged disc to relieve spinal cord or nerve root pressure and alleviate corresponding pain, weakness, numbness, and tingling
+</p>
+                  </div>
+                </div>
+              </div>
+			   <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Spinal Cord Surgery</h3>
+                    <p>The procedure is performed through a surgical incision in the back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+		
+				<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "BONE_MARROW_and_STEM_CELL">
+          <div class="row mb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Thalassemia Transplant</h3>
+                    <p>This tratment relies on high-dose chemotherapy to eliminate thalassemia-producing cells in the marrow and replaces them with the cells from a healthy donor, usually taken from a HLA match
+</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Pediatric Bone Marrow
+</h3>
+                    <p>The same is repeated for children with a few alterations. 
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Autologous for Lymphomas - Bone Marrow</h3>
+                    <p>The patient’s own stem cells are used. They are collected several times in the weeks before he gets trated with a high-dose chemo and/or radiation dose and then are given back into the patient’s blood.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Multiple Myeloma - Bone Marrow
+</h3>
+                    <p>Treatments include medication, chemotherapy, corticosteroids, radiation or a stem-cell transplant on specific abnormalities within cancer cells that allow them to survive.
+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
 		
 		
+		<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "CANCER_TREATMENT">
+          <div class="row mb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Chemotherapy
+</h3>
+                    <p>It is a type of treatment that includes a medication or combination of medications to treat cancer. The goal of chemo is to stop or slow the growth of cancer cells.
+</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">PET Scan
+</h3>
+                    <p>A positron emission tomography scan is an imaging test that allows your doctor to check for diseases in your body using radioactive tracers as special dyes.  
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Oral Cancer
+
+</h3>
+                    <p>Treatment includes surgery and radiation therapy. In some cases, chemotherapy may be required
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Breast Cancer
+
+</h3>
+                    <p>Breast cancer is cancer that develops from breast tissue. Its treatment depends on the stage of cancer. It may consist of chemotherapy, radiation, hormone therapy and surgery.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Cervical Cancer
+
+</h3>
+                    <p>Cervical cancer is a cancer arising from the cervix. It is due to the abnormal growth of cells that have the ability to invade or spread to other parts of the body. Treatments include surgery, radiation and chemotherapy.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Prostate Cancer
+
+</h3>
+                    <p>Some types of prostate cancer grow slowly. In some of these cases, monitoring is recommended. Other types are aggressive and require radiation, surgery, hormone therapy, chemotherapy or other treatments.
+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+		
+		<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "HEART_SURGERY">
+          <div class="row mb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Angioplasty
+</h3>
+                    <p>It is a minimally invasive, endovascular procedure to widen narrowed or obstructed arteries or veins, typically to treat arterial atherosclerosis.
+</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Heart Bypass (CABG)
+</h3>
+                    <p>It is a surgical procedure to restore normal blood flow to an obstructed coronary artery.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Angiography
+</h3>
+                    <p>It is a medical imaging technique used to visualize the inside, or lumen, of blood vessels and organs of the body, with particular interest in the arteries, veins and the heart chambers.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Aortic Valve Replacement
+</h3>
+                    <p>During this surgery, the damaged valve is removed and replaced with an artificial valve.
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Mitral Valve Replacement
+</h3>
+                    <p>Mitral valve replacement is a cardiac surgical procedure in which a patient's diseased mitral valve is replaced by either a mechanical or bioprosthetic valve
+</p>
+                  </div>
+                </div>
+              </div>
+			  <div class="col-lg-4 col-md-6">
+                <div class="media d-block mb-4 text-left probootstrap-media">
+                  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+                  <div class="media-body">
+                    <h3 class="h5 mt-0 text-secondary">Hole in the heart - ASD VSD
+</h3>
+                    <p>A heart defect due to an abnormal connection between the chambers of the heart. Most holes close on their own, although many may need surgery or a catheter-based procedure to close the hole. 
+</p>
+                  </div>
+                </div>
+              </div>
+			  
+            </div>
+        </div>
+		
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "TRANSPLANT">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Kidney Transplant
+</h3>
+			<p>Kidney transplantation or renal transplantation is the organ transplant of a kidney into a patient who has end-stage renal disease.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Liver Transplant
+</h3>
+			<p>Liver transplantation or hepatic transplantation is the replacement of a diseased liver with the healthy liver from another person.
+</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "OBESITY_and_WEIGHT_LOSS_TREATMENT">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Gastric Bypass
+
+</h3>
+			<p>Gastric bypass surgery refers to a surgical procedure in which the stomach is divided into a small upper pouch and a much larger lower "remnant" pouch and then the small intestine is rearranged to connect to both.
+
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Gastric Sleeve Surgery
+
+</h3>
+			<p>It is a weight loss procedure that removes part of the stomach and restricts the amount of food that can be eaten.
+
+</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+		
+		
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "COSMETIC_and_HAIR">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Hair Transplant
+</h3>
+			<p>Hair transplantation is a surgical technique that removes hair follicles from one part of the body, called the 'donor site', to a bald or balding part of the body known as the 'recipient site'
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Brazilian Butt Lift
+ </h3>
+			<p>A cosmetic surgery that uses your own fat to enhance the size and shape of your buttocks.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Face Lift
+ </h3>
+			<p>A facelift, technically known as a rhytidectomy, is a type of cosmetic surgery procedure used to give a more youthful facial appearance.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Tummy Tuck
+ </h3>
+			<p>Tummy tuck surgery, also known as abdominoplasty, removes excess fat and skin and, in most cases, restores weakened or separated muscles creating an abdominal profile that is smoother and firmer.
+</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "IVF_TREATMENT">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">IVF
+</h3>
+			<p>IVF is a common infertility treatment. During the procedure, a fertility doctor takes the eggs from the ovaries using a small needle and fertilizes them with sperm in a specialized lab. 
+</p>
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+</div>
+
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "HEPATITIS">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">HCV
+
+</h3>
+			<p>An infection caused by a virus that attacks the liver and leads to inflammation. Hepatitis C is treated with antiviral medication. In some people, newer medicines can eradicate the virus.
+
+</p>
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+</div>
+
+<div class="col-md-9 pl-md-5 pl-0 toggle" style="display:none" id= "AYURVEDA_WELLNESS">
+  <div class="row mb-5">
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Check and Rev Up - Wholistic healing
+</h3>
+			<p>Allopath Check up and ayurvedic healing. Ayurveda treatment can be for a period of 7/14/21 days
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Body Purification Therapy - 8 Days
+</h3>
+			<p>Body purification therapies in Ayurveda to help you body detox in right way. There are many body detox therapies applied. The right one as per the requirement can be chosen to purify you body.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Rejuvenation Therapy -10 Days
+</h3>
+			<p>Rejuvenation Therapy (Rasayana Chikitsa) in Ayurveda aids in toning up the skin and strengthening body tissues so as to facilitate longevity.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Stress Management Program 15- Days
+</h3>
+			<p>Stress Management Program is aimed at relieving stress by increasing the body’s level of Ojas by achieving proper hormonal balance and reinforcing mental potency to better cope with stress in the future.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Slimming Program -15 Days
+</h3>
+			<p>Reduce your weight with no side effects. Natural and safe is what ayurvedic slimming programme offers you
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Rejuvenation Therapy -15 Days
+</h3>
+			<p>Rejuvenation Therapy (Rasayana Chikitsa) in Ayurveda aids in toning up the skin and strengthening body tissues so as to facilitate longevity.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Beauty Care Program - 11 Days
+</h3>
+			<p>In Ayurveda there are several treatments for Beauty Care and all are basically taken from the purity of nature.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Body Purification Therapy -15 Days
+</h3>
+			<p>Body purification therapies in Ayurveda to help you body detox in right way. There are many body detox therapies applied. The right one as per the requirement can be chosen to purify you body.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Body Purification Therapy - 21 Days
+</h3>
+			<p>Body purification therapies in Ayurveda to help you body detox in right way. There are many body detox therapies applied. The right one as per the requirement can be chosen to purify you body.
+</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-4 col-md-6">
+		<div class="media d-block mb-4 text-left probootstrap-media">
+		  <div class="probootstrap-icon mb-3"><span class="fa fa-medkit  display-5"></span></div>
+		  <div class="media-body">
+			<h3 class="h5 mt-0 text-secondary">Anti-Ageing Program -23 Days
+</h3>
+			<p>Ayurveda prescribes treatment for repairing the wear and tear of the body due to ageing process.
+</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
       </div>
     </div>
   </section>
   
-
-
   
-  <section class="probootstrap-subscribe">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-12">
-          <h2 class="h1 text-white">Subscribe Newsletter</h2>
-          <!-- <p class="lead text-white">Far far away, behind the word mountains, far from the countries Vokalia.</p> -->
-        </div>
-      </div>
-      <form action="#" method="post">
-        <div class="row">
-          <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Name">    
-          </div>
-          <div class="col-md-4 mb-md-0 mb-3">
-            <input type="text" class="form-control" placeholder="Email">
-          </div>
-          <div class="col-md-4">
-            <input type="submit" value="Subscribe" class="btn btn-primary btn-block">
-          </div>
-        
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <footer class="probootstrap-footer">
-    <div class="container">
-      <div class="row mb-5">
-        <!-- <div class="col-md-3"> -->
-          <!-- <h3 class="heading">Latest Blog</h3> -->
-          <!-- <ul class="list-unstyled probootstrap-footer-recent-post"> -->
-            <!-- <li> -->
-              <!-- <a href="#"><span class="date">November 15, 2017</span> The practice of medicine is a lot like parenting </a> -->
-            <!-- </li> -->
-            <!-- <li> -->
-              <!-- <a href="#"><span class="date">November 15, 2017</span>Physicians: Want to overcome burnout? Start studying business. </a> -->
-            <!-- </li> -->
-          <!-- </ul> -->
-        <!-- </div> -->
-        <div class="col-md-3">
-          <h3 class="heading">Head Office</h3>
-          <p class="mb-5">xxxxx Street, yyyyyyyy</p>
-          
-        </div>
-        <div class="col-md-3">
-          <h3 class="heading text-white">Open</h3> 
-          <p>
-            Mon-Fri 7:30-18:00 <br>
-            Sat 7:30-18:00 <br>
-            Sun 7:30-18:00
-          </p>
-        </div>
-        <div class="col-md-3">
-          <h3 class="heading">Follow us</h3>
-          <ul class="probootstrap-footer-social">
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- END row -->
-      <div class="row probootstrap-copyright">
-        <div class="col-md-12">
-          <p><small>&copy; 2018 <a href="http://dataware.in/" target="_blank">dataware.in</a>. All Rights Reserved. Designed &amp; Developed by <a href="http://dataware.in/" target="_blank">dataware.in</a>  </small></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- loader -->
-    <div id="probootstrap-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#32609e"/></svg></div>
+  <!-- pharmacy Body end-->
   
-
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-
-  <script src="js/main.js"></script>
+  
   
 </body>
 </html>
